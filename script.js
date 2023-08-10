@@ -16,9 +16,25 @@ const imageDisplay = document.getElementById('imageDisplay');
 const titleElement2 =document.querySelector('h2')
 const uploadedImage = document.getElementById('uploadedImage');
 const fileselection = document.getElementById('customfilelabel');
+const playPauseButton = document.getElementById('playPauseButton');
+const playmusic = document.getElementById('playmusic');
+let isRotating = true;
 
 imageInput.addEventListener('change', handleImageUpload);
 languageSelect.addEventListener('change', changeLanguage);
+
+playmusic.play();
+
+playPauseButton.addEventListener('click', () => {
+    if (isRotating) {
+        playPauseButton.style.animationPlayState = 'paused'; // 停止旋转动画
+        playmusic.pause(); // 停止音乐播放
+    } else {
+        playPauseButton.style.animationPlayState = 'running'; // 开始旋转动画
+        playmusic.play(); // 播放音乐
+    }
+    isRotating = !isRotating; // 切换旋转状态
+});
 
 function handleImageUpload(event) {
     const selectedImage = event.target.files[0];
