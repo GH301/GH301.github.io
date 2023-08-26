@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- 语言类型 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>颜色调整器/Color Adjuster</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/x-icon" sizes="640*640" href="images/NEWICO1.ico">
+    <title>颜色调整器/Color Adjuster</title>  <!-- 主页名称 -->
+    <link rel="stylesheet" href="styles.css"> <!-- CSS文件读取位置 -->
+    <link rel="shortcut icon" type="image/x-icon" sizes="640*640" href="/多功能化模块集合/images/NEWICO1.ico">  <!-- 主题图标类型格式以及读取位置-->
 </head>
-<div class="language-toggle">
+<div class="language-toggle">  <!--语言选择组件 -->
     <label for="languageSelect">语言选择/Select Language:
         <select id="languageSelect">
             <option value="en">English</option>
@@ -16,27 +16,27 @@
     </label>
 </div>
 
-<body>
+<body> <!-- 主体位置 -->
     <div class="circle-button" id="playPauseButton">
         <img src="images/Abiogenesis.jpg" alt="Play">
         <audio id="playmusic" style="display: none" loop >
             <source src="sounds/Abiogenesis.mp3" type="audio/mpeg">
         </audio>
-    </div>
-    <div class="main-container">
-    <div class="container">
+    </div><!-- 音乐播放器 -->
+    <div class="main-container"> <!-- 嵌套式模块主层区 -->
+    <div class="container"> <!-- 颜色编辑区模块 -->
         <h1>Color Adjuster</h1>
-        <label for="baseColorInput">Base Color:</label>
-        <input type="color" id="baseColorInput"><br>`
-        <label for="brightnessSlider">Brightness:</label>
-        <input type="range" id="brightnessSlider" min="-100" max="100" value="0"><br>
-        <label for="alphaSlider">Alpha:</label>
-        <input type="range" id="alphaSlider" min="0" max="1" step="0.01" value="1"><br>
-        <div class="color-box" id="colorBox"></div>
-        <p><span id="colorCodeOutput"></span></p>
-        <p><span id="colorNumberOutput"></span></p>
+        <label for="baseColorInput">Base Color:</label><!-- 基础颜色基底选择区块 -->
+        <input type="color" id="baseColorInput"><br>
+        <label for="brightnessSlider">Brightness:</label><!-- 颜色亮度区快 -->
+        <input type="range" id="brightnessSlider" min="-100" max="100" value="0"><br><!-- 颜色亮度滑块  -->
+        <label for="alphaSlider">Alpha:</label><!-- 透明度区快 -->
+        <input type="range" id="alphaSlider" min="0" max="1" step="0.01" value="1"><br><!-- 透明度滑块 -->
+        <div class="color-box" id="colorBox"></div><!--颜色显示部分-->
+        <p><span id="colorCodeOutput"></span></p><!-- 颜色代码属性输出部分-->
+        <p><span id="colorNumberOutput"></span></p><!-- 颜色编号输出部分-->
     </div>
-    <div class="imageupdate">
+    <div class="imageupdate"><!-- 图片上传区模块 -->
         <h2>image upload</h2>
         <input type="file" id="imageInput" style="display: none">
             <label for="imageInput" class="custom-file-label" id="customfilelabel"></label>
@@ -44,6 +44,6 @@
             <img id="uploadedImage" src="#" alt="">
     </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js"></script><!-- JAVASCRIPT读取位置 -->
 </body>
 </html>

@@ -18,6 +18,7 @@ const uploadedImage = document.getElementById('uploadedImage');
 const fileselection = document.getElementById('customfilelabel');
 const playPauseButton = document.getElementById('playPauseButton');
 const playmusic = document.getElementById('playmusic');
+const title = document.getElementsByTagName('title');
 let isRotating = true;
 
 imageInput.addEventListener('change', handleImageUpload);
@@ -60,6 +61,7 @@ function changeLanguage() {//其中的语言文本
         colorNumberLabel.textContent = '颜色编号：';
         titleElement2.textContent = '图片上传'
         fileselection.textContent = '选择文件'
+        title.textContent = '颜色'
     } else {
         titleElement.textContent = 'Color Adjuster';
         baseColorLabel.textContent = 'Base Color:';
